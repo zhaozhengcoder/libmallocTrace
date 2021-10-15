@@ -45,3 +45,8 @@ A tool for tracking memory allocation based ld-preload
     ...
 
     ```
+
+
+* read more
+
+    https://www.jianshu.com/p/c2c6644a7380
