@@ -10,6 +10,7 @@ A tool for tracking memory allocation based ld-preload
 * how to use
 
     a simple way is to execute something like below : 
+
     LD_PRELOAD=/you_path/libmTrace.so /you_path/application
 
     such as:
@@ -18,7 +19,7 @@ A tool for tracking memory allocation based ld-preload
     LD_PRELOAD=../libmTrace.so ./example
     ```
 
-    Run example generate trace log. You can see appliaction invoke malloc/free/new/delete) backtrace.
+    Run example generate trace log. You can see appliaction invoke malloc/free/new/delete backtrace.
     ```
     ... 
 
