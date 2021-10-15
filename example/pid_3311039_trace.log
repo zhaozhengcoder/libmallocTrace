@@ -1,0 +1,454 @@
+setting up hooks...
+malloc (72704) returned @0x405490
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+/lib64/libstdc++.so.6(+0x92bea) [0x7ffff7ad1bea]
+/lib64/ld-linux-x86-64.so.2(+0xfeca) [0x7ffff7de3eca]
+/lib64/ld-linux-x86-64.so.2(+0xffca) [0x7ffff7de3fca]
+/lib64/ld-linux-x86-64.so.2(+0x108a) [0x7ffff7dd508a]
+
+
+malloc (488) returned @0x4052a0
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+/lib64/libc.so.6(+0x713bf) [0x7ffff71543bf]
+../libmTrace.so(_Z6LogoutPKc+0x5f) [0x7ffff7fd9218]
+../libmTrace.so(+0x1270) [0x7ffff7fd9270]
+/lib64/ld-linux-x86-64.so.2(+0xfeca) [0x7ffff7de3eca]
+/lib64/ld-linux-x86-64.so.2(+0xffca) [0x7ffff7de3fca]
+/lib64/ld-linux-x86-64.so.2(+0x108a) [0x7ffff7dd508a]
+
+
+malloc (4096) returned @0x417710
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+/lib64/libc.so.6(_IO_file_doallocate+0x90) [0x7ffff71539c0]
+/lib64/libc.so.6(_IO_doallocbuf+0x50) [0x7ffff7161b70]
+/lib64/libc.so.6(_IO_file_overflow+0x198) [0x7ffff7160dd8]
+/lib64/libc.so.6(_IO_file_xsputn+0x10f) [0x7ffff715ff6f]
+/lib64/libc.so.6(_IO_vfprintf+0x125) [0x7ffff7133425]
+/lib64/libc.so.6(_IO_fprintf+0x98) [0x7ffff713c158]
+../libmTrace.so(_Z6LogoutPKc+0x85) [0x7ffff7fd923e]
+../libmTrace.so(+0x1270) [0x7ffff7fd9270]
+/lib64/ld-linux-x86-64.so.2(+0xfeca) [0x7ffff7de3eca]
+/lib64/ld-linux-x86-64.so.2(+0xffca) [0x7ffff7de3fca]
+/lib64/ld-linux-x86-64.so.2(+0x108a) [0x7ffff7dd508a]
+
+
+init so ...
+freed pointer @0x417710
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x14d8) [0x7ffff7fd94d8]
+/lib64/libc.so.6(_IO_setb+0x53) [0x7ffff7161b03]
+/lib64/libc.so.6(_IO_file_close_it+0xe0) [0x7ffff71601b0]
+/lib64/libc.so.6(fclose+0x12f) [0x7ffff7153bbf]
+../libmTrace.so(_Z6LogoutPKc+0xa2) [0x7ffff7fd925b]
+../libmTrace.so(+0x1270) [0x7ffff7fd9270]
+/lib64/ld-linux-x86-64.so.2(+0xfeca) [0x7ffff7de3eca]
+/lib64/ld-linux-x86-64.so.2(+0xffca) [0x7ffff7de3fca]
+/lib64/ld-linux-x86-64.so.2(+0x108a) [0x7ffff7dd508a]
+
+
+freed pointer @0x4052a0
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x14d8) [0x7ffff7fd94d8]
+/lib64/libc.so.6(fclose+0xa5) [0x7ffff7153b35]
+../libmTrace.so(_Z6LogoutPKc+0xa2) [0x7ffff7fd925b]
+../libmTrace.so(+0x1270) [0x7ffff7fd9270]
+/lib64/ld-linux-x86-64.so.2(+0xfeca) [0x7ffff7de3eca]
+/lib64/ld-linux-x86-64.so.2(+0xffca) [0x7ffff7de3fca]
+/lib64/ld-linux-x86-64.so.2(+0x108a) [0x7ffff7dd508a]
+
+
+malloc (1024) returned @0x418720
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+/lib64/libc.so.6(_IO_file_doallocate+0x90) [0x7ffff71539c0]
+/lib64/libc.so.6(_IO_doallocbuf+0x50) [0x7ffff7161b70]
+/lib64/libc.so.6(_IO_file_overflow+0x198) [0x7ffff7160dd8]
+/lib64/libc.so.6(_IO_file_xsputn+0x10f) [0x7ffff715ff6f]
+/lib64/libc.so.6(_IO_vfprintf+0x827) [0x7ffff7133b27]
+/lib64/libc.so.6(_IO_printf+0xaa) [0x7ffff713c22a]
+./example(main+0x3b) [0x40133e]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (981) returned @0x417ff0
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+./example(_Z4leaki+0x31) [0x4011f7]
+./example(main+0x5d) [0x401360]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (981) returned @0x418b30
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+/lib64/libstdc++.so.6(_Znwm+0x1c) [0x7ffff7ad5d3c]
+./example(_Z4leaki+0x72) [0x401238]
+./example(main+0x5d) [0x401360]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (404) returned @0x419120
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+./example(_Z7notleaki+0x31) [0x401287]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+freed pointer @0x419120
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x14d8) [0x7ffff7fd94d8]
+./example(_Z7notleaki+0x58) [0x4012ae]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (404) returned @0x419120
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+/lib64/libstdc++.so.6(_Znwm+0x1c) [0x7ffff7ad5d3c]
+./example(_Z7notleaki+0x7e) [0x4012d4]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+freed pointer @0x419120
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x14d8) [0x7ffff7fd94d8]
+./example(_Z7notleaki+0xaa) [0x401300]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (873) returned @0x4192c0
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+./example(_Z4leaki+0x31) [0x4011f7]
+./example(main+0x5d) [0x401360]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (873) returned @0x419640
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+/lib64/libstdc++.so.6(_Znwm+0x1c) [0x7ffff7ad5d3c]
+./example(_Z4leaki+0x72) [0x401238]
+./example(main+0x5d) [0x401360]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (247) returned @0x418590
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+./example(_Z7notleaki+0x31) [0x401287]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+freed pointer @0x418590
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x14d8) [0x7ffff7fd94d8]
+./example(_Z7notleaki+0x58) [0x4012ae]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (247) returned @0x418590
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+/lib64/libstdc++.so.6(_Znwm+0x1c) [0x7ffff7ad5d3c]
+./example(_Z7notleaki+0x7e) [0x4012d4]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+freed pointer @0x418590
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x14d8) [0x7ffff7fd94d8]
+./example(_Z7notleaki+0xaa) [0x401300]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (79) returned @0x418690
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+./example(_Z4leaki+0x31) [0x4011f7]
+./example(main+0x5d) [0x401360]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (79) returned @0x4199c0
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+/lib64/libstdc++.so.6(_Znwm+0x1c) [0x7ffff7ad5d3c]
+./example(_Z4leaki+0x72) [0x401238]
+./example(main+0x5d) [0x401360]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (815) returned @0x419a20
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+./example(_Z7notleaki+0x31) [0x401287]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+freed pointer @0x419a20
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x14d8) [0x7ffff7fd94d8]
+./example(_Z7notleaki+0x58) [0x4012ae]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (815) returned @0x419a20
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+/lib64/libstdc++.so.6(_Znwm+0x1c) [0x7ffff7ad5d3c]
+./example(_Z7notleaki+0x7e) [0x4012d4]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+freed pointer @0x419a20
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x14d8) [0x7ffff7fd94d8]
+./example(_Z7notleaki+0xaa) [0x401300]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (95) returned @0x419d60
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+./example(_Z4leaki+0x31) [0x4011f7]
+./example(main+0x5d) [0x401360]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (95) returned @0x419dd0
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+/lib64/libstdc++.so.6(_Znwm+0x1c) [0x7ffff7ad5d3c]
+./example(_Z4leaki+0x72) [0x401238]
+./example(main+0x5d) [0x401360]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (726) returned @0x419e40
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+./example(_Z7notleaki+0x31) [0x401287]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+freed pointer @0x419e40
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x14d8) [0x7ffff7fd94d8]
+./example(_Z7notleaki+0x58) [0x4012ae]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (726) returned @0x419e40
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+/lib64/libstdc++.so.6(_Znwm+0x1c) [0x7ffff7ad5d3c]
+./example(_Z7notleaki+0x7e) [0x4012d4]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+freed pointer @0x419e40
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x14d8) [0x7ffff7fd94d8]
+./example(_Z7notleaki+0xaa) [0x401300]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (576) returned @0x41a120
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+./example(_Z4leaki+0x31) [0x4011f7]
+./example(main+0x5d) [0x401360]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (576) returned @0x41a370
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+/lib64/libstdc++.so.6(_Znwm+0x1c) [0x7ffff7ad5d3c]
+./example(_Z4leaki+0x72) [0x401238]
+./example(main+0x5d) [0x401360]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (749) returned @0x41a5c0
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+./example(_Z7notleaki+0x31) [0x401287]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+freed pointer @0x41a5c0
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x14d8) [0x7ffff7fd94d8]
+./example(_Z7notleaki+0x58) [0x4012ae]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (749) returned @0x41a5c0
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+/lib64/libstdc++.so.6(_Znwm+0x1c) [0x7ffff7ad5d3c]
+./example(_Z7notleaki+0x7e) [0x4012d4]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+freed pointer @0x41a5c0
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x14d8) [0x7ffff7fd94d8]
+./example(_Z7notleaki+0xaa) [0x401300]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (96) returned @0x41a8c0
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+./example(_Z4leaki+0x31) [0x4011f7]
+./example(main+0x5d) [0x401360]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (96) returned @0x41a930
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+/lib64/libstdc++.so.6(_Znwm+0x1c) [0x7ffff7ad5d3c]
+./example(_Z4leaki+0x72) [0x401238]
+./example(main+0x5d) [0x401360]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (212) returned @0x41a9a0
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+./example(_Z7notleaki+0x31) [0x401287]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+freed pointer @0x41a9a0
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x14d8) [0x7ffff7fd94d8]
+./example(_Z7notleaki+0x58) [0x4012ae]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+malloc (212) returned @0x41a9a0
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x146c) [0x7ffff7fd946c]
+/lib64/libstdc++.so.6(_Znwm+0x1c) [0x7ffff7ad5d3c]
+./example(_Z7notleaki+0x7e) [0x4012d4]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
+freed pointer @0x41a9a0
+[backtrace]
+../libmTrace.so(_Z14printBacktracev+0x2b) [0x7ffff7fd9370]
+../libmTrace.so(+0x14d8) [0x7ffff7fd94d8]
+./example(_Z7notleaki+0xaa) [0x401300]
+./example(main+0x7f) [0x401382]
+/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+./example(_start+0x2e) [0x40110e]
+
+
