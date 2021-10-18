@@ -29,20 +29,19 @@ void Logout(const char* pszLog)
     if (pfile)
     {
         fprintf(pfile, pszLog);
-        fprintf(pfile, "\n");
         fclose(pfile);
     }
 }
 
 __attribute__((constructor)) static void init_so()
 {
-    Logout("init so ...");
+    // Logout("init so ...\n");
     return;
 }
 
 static void myInitHook(void)
 {
-    Logout("setting up hooks...");
+    // Logout("setting up hooks...\n");
     old_malloc_hook = __malloc_hook;
     old_free_hook   = __free_hook;
     __malloc_hook   = myMallocHook;
@@ -69,7 +68,6 @@ static void saveOldHooks()
 
 void printBacktrace()
 {
-    Logout("[backtrace]");
     void *array[16];
 
     size_t size = backtrace(array, 16);
@@ -86,7 +84,6 @@ void printBacktrace()
         Logout(strings[i]);
     }
     free(strings);
-    Logout("\n");
 }
 
 static void* myMallocHook(size_t size, const void* caller)
@@ -98,9 +95,12 @@ static void* myMallocHook(size_t size, const void* caller)
  
     // Do your memory statistics here...
     snprintf(logBuff, sizeof(logBuff)
-        , "malloc (%u) returned @%p", (unsigned int) size, res);
+        , "\n{\"Addr\" : \"%p\", \"type\" : \"alloc\", \"size\" : %u, \"backtrace\": \""
+        , res, (unsigned int) size);
+    
     Logout(logBuff);
     printBacktrace();
+    Logout("\"} \n");
 
     // Restore our own hooks
     restoreMyHooks();
@@ -114,10 +114,11 @@ static void myFreeHook(void* ptr, const void* caller)
     saveOldHooks();
  
     // Do your memory statistics here...
-    snprintf(logBuff, sizeof(logBuff), "freed pointer @%p", ptr);
+    snprintf(logBuff, sizeof(logBuff)
+        , "\n{\"Addr\" : \"%p\", \"type\" : \"free\", \"backtrace\": \"", ptr);
     Logout(logBuff);
     printBacktrace();
- 
+    Logout("\"} \n");
     // Restore our own hooks
     restoreMyHooks();
 }

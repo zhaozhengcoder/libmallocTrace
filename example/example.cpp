@@ -38,8 +38,10 @@ int main(int argc, char** argv)
     srand((unsigned)time(NULL));
     printf("%s: PID: %d\n", __PRETTY_FUNCTION__, getpid());
 
-    while (1) 
+    int times = 1;
+    while (times) 
     {
+        times--;
         leak(rand() % 1024);
         notleak(rand() % 1024);
         sleep(rand() % 10);
