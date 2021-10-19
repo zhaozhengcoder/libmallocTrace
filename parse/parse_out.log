@@ -1,0 +1,13 @@
+maybe leak memery info :
+>>>>>  
+addr :  0x4052a0
+info :  {'Addr': '0x4052a0', 'type': 'alloc', 'size': 72704, 'backtrace': '../libmTrace.so(_Z14printBacktracev+0x1f) [0x7ffff7fd9327]../libmTrace.so(+0x1418) [0x7ffff7fd9418]/lib64/libstdc++.so.6(+0x92bea) [0x7ffff7ad1bea]/lib64/ld-linux-x86-64.so.2(+0xfeca) [0x7ffff7de3eca]/lib64/ld-linux-x86-64.so.2(+0xffca) [0x7ffff7de3fca]/lib64/ld-linux-x86-64.so.2(+0x108a) [0x7ffff7dd508a]'}
+>>>>>  
+addr :  0x4172c0
+info :  {'Addr': '0x4172c0', 'type': 'alloc', 'size': 1024, 'backtrace': '../libmTrace.so(_Z14printBacktracev+0x1f) [0x7ffff7fd9327]../libmTrace.so(+0x1418) [0x7ffff7fd9418]/lib64/libc.so.6(_IO_file_doallocate+0x90) [0x7ffff71539c0]/lib64/libc.so.6(_IO_doallocbuf+0x50) [0x7ffff7161b70]/lib64/libc.so.6(_IO_file_overflow+0x198) [0x7ffff7160dd8]/lib64/libc.so.6(_IO_file_xsputn+0x10f) [0x7ffff715ff6f]/lib64/libc.so.6(_IO_vfprintf+0x827) [0x7ffff7133b27]/lib64/libc.so.6(_IO_printf+0xaa) [0x7ffff713c22a]./example(main+0x3b) [0x40133e]/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]./example(_start+0x2e) [0x40110e]'}
+>>>>>  
+addr :  0x417a30
+info :  {'Addr': '0x417a30', 'type': 'alloc', 'size': 769, 'backtrace': '../libmTrace.so(_Z14printBacktracev+0x1f) [0x7ffff7fd9327]../libmTrace.so(+0x1418) [0x7ffff7fd9418]./example(_Z4leaki+0x31) [0x4011f7]./example(main+0x6e) [0x401371]/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]./example(_start+0x2e) [0x40110e]'}
+>>>>>  
+addr :  0x417f00
+info :  {'Addr': '0x417f00', 'type': 'alloc', 'size': 769, 'backtrace': '../libmTrace.so(_Z14printBacktracev+0x1f) [0x7ffff7fd9327]../libmTrace.so(+0x1418) [0x7ffff7fd9418]/lib64/libstdc++.so.6(_Znwm+0x1c) [0x7ffff7ad5d3c]./example(_Z4leaki+0x72) [0x401238]./example(main+0x6e) [0x401371]/lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]./example(_start+0x2e) [0x40110e]'}
