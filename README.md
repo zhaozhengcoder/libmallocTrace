@@ -46,6 +46,43 @@ A tool for tracking memory allocation based ld-preload
 
     ```
 
+* parse tools 
+
+    parse.sh can analyze the logs of memory allocation and memory release, and locate which memory has not been released after application.
+
+    for example:
+
+    ```
+    // example.cpp 
+    void leak(int num)
+    {
+        printf("%s [malloc] allocating %d bytes...\n", __PRETTY_FUNCTION__, num);
+        void * p1 = malloc(num);
+        memset(p1, 0, num);
+
+        printf("%s [new] allocating %d bytes...\n", __PRETTY_FUNCTION__, num);
+        char * p2 = new char[num];
+        memset(p2, 0, num);
+        return;
+    }
+    ```
+
+    ```
+    // parse tool locate leak memery
+    maybe leak memery info :
+    addr :  0x417a30
+    info :  
+        {
+            'Addr': '0x417a30', 'type': 'alloc', 'size': 769, 
+            'backtrace': '
+                ../libmTrace.so(_Z14printBacktracev+0x1f) [0x7ffff7fd9327]
+                ../libmTrace.so(+0x1418) [0x7ffff7fd9418]
+                ./example(_Z4leaki+0x31) [0x4011f7]
+                ./example(main+0x6e) [0x401371]
+                /lib64/libc.so.6(__libc_start_main+0xf3) [0x7ffff71066a3]
+                ./example(_start+0x2e) [0x40110e]'
+        }
+    ```
 
 * read more
 
