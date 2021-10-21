@@ -20,8 +20,6 @@
 
 static int global_init_done = 0;
 static __thread int hook_recursive = 0;
-#define MAX_OUTPUT_BUFF_SIZE 4096
-char logBuff[MAX_OUTPUT_BUFF_SIZE];
 
 static void * (*glibc_malloc)(size_t) = NULL;
 static void * (*glibc_calloc)(size_t, size_t)  = NULL;
@@ -45,6 +43,21 @@ __attribute__((constructor)) static void init_so()
 {
     __init_mtrace();
     return;
+}
+
+int recursiveHasLock()
+{
+    return hook_recursive == 1;
+}
+
+void recursiveLock()
+{
+    hook_recursive = 1;
+}
+
+void recursiveFree()
+{
+    hook_recursive = 0;
 }
 
 void Logout(const char *fmt, ...)
@@ -86,39 +99,47 @@ void *malloc(size_t size)
 {
     void *res;
 
-    if (hook_recursive == 1)
+    if (recursiveHasLock())
         return glibc_malloc(size);
 
-    hook_recursive = 1;
+    // lock
+    recursiveLock();
+
     if (!global_init_done)
         __init_mtrace();
 
     res = glibc_malloc(size);
 
+    // Do your memory statistics here...
     Logout("\n{\"Addr\" : \"%p\", \"type\" : \"alloc\", \"size\" : %u, \"backtrace\": \""
         , res, (unsigned int) size);
     printBacktrace();
     Logout("\"} \n");
 
-    hook_recursive = 0;
+    // unlock
+    recursiveFree();
+    
     return res;
 }
 
 void free(void *ptr)
 {
-    if (hook_recursive == 1)
+    if (recursiveHasLock())
         return glibc_free(ptr);
 
-    hook_recursive = 1;
+    // lock
+    recursiveLock();
 
     if (!global_init_done)
         __init_mtrace();
     
+    // Do your memory statistics here...
     Logout("\n{\"Addr\" : \"%p\", \"type\" : \"free\", \"backtrace\": \"", ptr);
-
     glibc_free(ptr);
     printBacktrace();
     Logout("\"} \n");
-    hook_recursive = 0;
+
+    // unlock
+    recursiveFree();
     return;
 }

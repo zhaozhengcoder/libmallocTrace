@@ -6,6 +6,7 @@
 #include <libgen.h>
 #include <string.h>
 #include <errno.h>
+#include <stdarg.h>
 
 static void myInitHook(void);
 static void *myMallocHook(size_t, const void*);
@@ -14,23 +15,20 @@ static void  myFreeHook(void*, const void*);
 static void *(*old_malloc_hook)(size_t, const void *);
 static void  (*old_free_hook)(void*, const void *);
 
-const int BUFF_SIZE = 1024 * 100;
-char logBuff[BUFF_SIZE];
-
 void (*__malloc_initialize_hook) (void) = myInitHook;
 
-void Logout(const char* pszLog)
+void Logout(const char *fmt, ...)
 {
-    if (NULL == pszLog) {return;}
-
     char path[128];
     snprintf(path, sizeof(path), "pid_%d_trace.log", getpid());
     FILE* pfile = fopen(path, "ab+");
-    if (pfile)
-    {
-        fprintf(pfile, pszLog);
-        fclose(pfile);
-    }
+    if (pfile == NULL) {return;}
+
+    va_list ap;
+    va_start(ap, fmt);
+    fprintf(pfile, fmt, ap);
+    va_end(ap);
+    fclose(pfile);
 }
 
 __attribute__((constructor)) static void init_so()
@@ -94,11 +92,8 @@ static void* myMallocHook(size_t size, const void* caller)
     saveOldHooks();
  
     // Do your memory statistics here...
-    snprintf(logBuff, sizeof(logBuff)
-        , "\n{\"Addr\" : \"%p\", \"type\" : \"alloc\", \"size\" : %u, \"backtrace\": \""
+    Logout("\n{\"Addr\" : \"%p\", \"type\" : \"alloc\", \"size\" : %u, \"backtrace\": \""
         , res, (unsigned int) size);
-    
-    Logout(logBuff);
     printBacktrace();
     Logout("\"} \n");
 
@@ -114,9 +109,7 @@ static void myFreeHook(void* ptr, const void* caller)
     saveOldHooks();
  
     // Do your memory statistics here...
-    snprintf(logBuff, sizeof(logBuff)
-        , "\n{\"Addr\" : \"%p\", \"type\" : \"free\", \"backtrace\": \"", ptr);
-    Logout(logBuff);
+    Logout("\n{\"Addr\" : \"%p\", \"type\" : \"free\", \"backtrace\": \"", ptr);
     printBacktrace();
     Logout("\"} \n");
     // Restore our own hooks
